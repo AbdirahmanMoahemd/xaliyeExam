@@ -1,5 +1,5 @@
 import asyncHandler from "express-async-handler";
-import Questions from "../models/questionsModel";
+import Questions from "../models/questionsModel.js";
 
 
 
