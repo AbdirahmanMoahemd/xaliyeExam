@@ -23,6 +23,11 @@ const userSchema = mongoose.Schema(
       required: true,
       default: false,
     },
+    isAllowed: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
     phone: {
       type: String,
     },
