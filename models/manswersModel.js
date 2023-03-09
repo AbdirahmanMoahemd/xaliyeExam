@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
-const AnswersSchema = mongoose.Schema(
+const MAnswersSchema = mongoose.Schema(
   {
     userAnswer: [
       {
         name: { type: String },
-        answers: [
+        options: [
           {
             type: String,
           },
@@ -19,6 +19,6 @@ const AnswersSchema = mongoose.Schema(
   }
 );
 
-const Answers = mongoose.model("Answers", AnswersSchema);
+const MAnswers = mongoose.model("MAnswers", MAnswersSchema);
 
-export default Answers;
+export default MAnswers;
