@@ -4,7 +4,7 @@ import { admin, protect } from "../middlewares/authMiddleware.js";
 
 const router = express.Router();
 
-router.route("/").get(getMquestions).post(protect, createMAnswers);
+router.route("/").get(getMquestions).post(createMAnswers);
 
 
 export default router;
