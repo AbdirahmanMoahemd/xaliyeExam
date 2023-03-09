@@ -1,13 +1,9 @@
 import dotenv from 'dotenv'
-import users from './data/users.js';
-import meals from './data/meals.js';
-import mealcats from './data/mealcats.js';
-import restaurants from './data/restaurants.js';
-import User from './models/userModel.js';
 import connectDB from './config/db2.js';
-import Meal from './models/mealModel.js';
-import MealCategory from './models/mealcategoryModel.js';
-import Restaurant from './models/restaurantsModel.js';
+import direct from './data/direct.js';
+import questions from './data/questions.js';
+import MQuestion from './models/multiQuestions.js';
+import Question from './models/questionsModel.js';
 
 
 dotenv.config()
@@ -16,17 +12,17 @@ connectDB()
 
 const importData = async () => {
     try {
-        await Restaurant.deleteMany()
+        // await MQuestion.deleteMany()
 
-        const createUsers = await User.insertMany(users)
+        // const createUsers = await User.insertMany(users)
 
 
-        const adminUser2 = createUsers[0]._id
-        const sampleSlides = restaurants.map(meal => {
-            return {...meal, user: adminUser2}
+        // const adminUser2 = createUsers[0]._id
+        const sampleSlides = direct.map(meal => {
+            return {...meal}
         })
 
-        await Restaurant.insertMany(sampleSlides)
+        await Question.insertMany(sampleSlides)
         console.log('Data Imported! '.green.inverse)
         process.exit()
  
