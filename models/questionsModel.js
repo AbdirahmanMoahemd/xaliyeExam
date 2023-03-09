@@ -15,6 +15,6 @@ const QuestionSchema = mongoose.Schema(
 
 
 
-const Question = mongoose.model("Question", QuestionSchema);
+const Questions = mongoose.model("Questions", QuestionSchema);
 
-export default Question;
+export default Questions;

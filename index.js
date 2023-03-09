@@ -6,6 +6,7 @@ import connectDB from "./config/db2.js";
 import colors from 'colors'
 import userRoutes from "./routes/userRoutes.js";
 import mquestionsRoutes from "./routes/mquestionsRoutes.js";
+import questionsRoutes from "./routes/questionsRoutes.js";
 
 
 
@@ -20,6 +21,7 @@ const app = express();
 app.use(express.json());
 app.use("/api/users", userRoutes);
 app.use("/api/mquestions", mquestionsRoutes);
+app.use("/api/questions", questionsRoutes);
 
 
 
