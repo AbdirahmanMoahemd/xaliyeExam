@@ -3,14 +3,10 @@ import bcrypt from "bcryptjs";
 
 const AnswersSchema = mongoose.Schema(
   {
-    userAnswer: [
+    name: { type: String },
+    answers: [
       {
-        name: { type: String },
-        answers: [
-          {
-            type: String,
-          },
-        ],
+        type: String,
       },
     ],
   },

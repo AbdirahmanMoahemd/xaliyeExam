@@ -3,16 +3,15 @@ import bcrypt from "bcryptjs";
 
 const MAnswersSchema = mongoose.Schema(
   {
-    userAnswer: [
-      {
+   
         name: { type: String },
         options: [
           {
             type: String,
           },
         ],
-      },
-    ],
+      
+    
   },
   {
     timestamps: true,
