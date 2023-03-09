@@ -11,7 +11,7 @@ import {
   getUserById,
   // updateUser,
   // updateUserPassword,
-  // getUserProfileById,
+  getUserProfileById,
   authUser2,
   registerUser2,
   // forgottUserPassword,
@@ -28,7 +28,7 @@ router.post("/app/login", authUser2);
 //   .route("/profile")
 //   .get(protect, getUserProfile)
 //   .put(protect, updateProfile);
-// router.route('/profile/:id').post(getUserProfileById)
+router.route('/profile/:id').post(getUserProfileById)
 // router.route('/save-user-address').put(protect, saveUserAddress)
 // router.route('/update/forgot/email').post(forgottUserPassword)
 // router.route("/profile/password").put(protect, updateUserPassword);

@@ -16,6 +16,7 @@ export const authUser = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      isAllowed: user.isAllowed,
       phone: user.phone,
       token: generateToken(user._id),
     });
@@ -38,8 +39,8 @@ export const authUser2 = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      isAllowed: user.isAllowed,
       phone: user.phone,
-      address: user.address,
       token: generateToken(user._id),
     });
   } else {
@@ -71,6 +72,7 @@ export const registerUser = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      isAllowed: user.isAllowed,
       phone: user.phone,
       token: generateToken(user._id),
     });
@@ -104,6 +106,7 @@ export const registerUser2 = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      isAllowed: user.isAllowed,
       phone: user.phone,
       token: generateToken(user._id),
     });
@@ -124,6 +127,7 @@ export const getUserProfile = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      isAllowed: user.isAllowed,
       phone: user.phone,
     });
   } else {
@@ -145,6 +149,7 @@ export const getUserProfileById = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      isAllowed: user.isAllowed,
       phone: user.phone,
       token,
     });
